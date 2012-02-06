@@ -1,0 +1,9 @@
+ //µ¼º½
+        var navList = $("header").find("nav").find("a"),arr = [".weibo",".guests-list",".agenda-table","footer"];//
+        navList.click(function() {
+            toTarget($(this).index());
+        });
+        function toTarget(index) {
+            var opt = $(arr[index]).offset();
+            $('body,html').animate({scrollTop:opt.top}, 500);
+        }
